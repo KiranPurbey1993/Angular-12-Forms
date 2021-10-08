@@ -1,0 +1,25 @@
+.form_container h2{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.mat-form-field {
+    width: 100%;
+    min-width: 300px;
+  }
+.mat-radio-group{
+    margin-left: 15px;
+}
+  mat-card-title,
+  mat-card-content {
+    display: flex;
+    justify-content: center;
+  }
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
+  .mat-radio-label{margin:0 15px 0 0;}
+  .button {
+    display: flex;
+    justify-content: flex-end;
+  }

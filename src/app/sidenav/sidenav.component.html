@@ -1,0 +1,35 @@
+
+<div >
+  <mat-toolbar color="primary" class="example-toolbar">
+    <button mat-mini-fab (click)="drawer.toggle()" color="warn" style="margin: 10px;">
+      <mat-icon >menu</mat-icon>
+    </button>
+    <h1 class="example-app-name">RealMe App</h1>
+  </mat-toolbar>
+  <mat-drawer-container class="example-container" >
+      <mat-drawer #drawer class="example-sidenav" mode="side" disableClose="false" opened="false">
+        <mat-nav-list >
+
+          <a mat-list-item [routerLink]="'/login'" routerLinkActive="active" 
+          [routerLinkActiveOptions]={exact:true}> 
+            <mat-icon>account_circle</mat-icon>
+             Template Driven Form </a>
+          <!-- <mat-divider></mat-divider> -->
+          <a mat-list-item [routerLink]="'/reactive-form'" routerLinkActive="active" 
+          [routerLinkActiveOptions]={exact:true}> 
+            <mat-icon>account_box</mat-icon>
+             Reactive Form </a>
+
+          <a mat-list-item [routerLink]="'/dashboard'" routerLinkActive="active"> 
+            <mat-icon mat-list-icon>dashboard</mat-icon>
+             Dashbaord </a>
+    
+        </mat-nav-list>
+      </mat-drawer>
+    
+      <div class="example-sidenav-content">
+        <router-outlet></router-outlet>
+      </div>
+    
+    </mat-drawer-container>
+</div>

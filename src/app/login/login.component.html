@@ -1,0 +1,46 @@
+<div class="form_container">
+    <h2>Template Driven Form</h2>
+    <br/>
+    <mat-card>
+        <mat-card-title>Login</mat-card-title>
+        <mat-card-content>
+            <form  #userForm="ngForm" (ngSubmit)="userForm.form.valid && onSubmit(userForm)">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel"
+                    [ngClass]="{ 'is-invalid': userForm.submitted && email.invalid }" email required>
+                <div *ngIf="userForm.submitted && email.invalid" class="invalid-feedback">
+                    <mat-error *ngIf="email.errors?.required">Email is required</mat-error>
+                    <mat-error *ngIf="email.errors?.email">Must be a valid email address</mat-error>
+                </div>
+                
+                </mat-form-field>
+                
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel"
+                    [ngClass]="{ 'is-invalid': userForm.submitted && password.invalid }" minlength="5" required>
+                <div *ngIf="userForm.submitted && password.invalid" class="invalid-feedback">
+                    <mat-error *ngIf="password.errors?.required">Password is required</mat-error>
+                    <mat-error *ngIf="password.errors?.minlength">Password should be at least 8 characters long</mat-error>
+                </div>
+                
+                </mat-form-field>
+            
+            <div class="button">
+                <button mat-raised-button  color="primary">Login</button>
+            </div>
+            
+            </form>
+        </mat-card-content>
+    </mat-card>
+
+
+
+</div>
+<mat-divider></mat-divider>
+
+<div class="link_container">
+    <a (click)="goToReactiveForm()">Go to Reactive Form Module</a>
+</div>
+
