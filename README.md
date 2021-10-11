@@ -31,3 +31,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Author
 Kiran Purbey
+
+
+
+## plugin
+Angular Material
+Slimscroll  `https://www.npmjs.com/package/ngx-slimscroll`
+Mat Icons `https://www.angularjswiki.com/angular/angular-material-icons-list-mat-icon-list/`
+flex layout library `https://zoaibkhan.com/blog/create-a-responsive-card-grid-in-angular-using-flex-layout-part-1/`
