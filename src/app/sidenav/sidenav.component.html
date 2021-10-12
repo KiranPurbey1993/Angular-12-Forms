@@ -11,15 +11,15 @@
         <mat-nav-list >
 
           <a mat-list-item [routerLink]="'/login'" routerLinkActive="active" 
-          [routerLinkActiveOptions]={exact:true}> 
+          [routerLinkActiveOptions]={exact:true}  (click)="drawer.close()"> 
             <mat-icon>account_circle</mat-icon>
              Template Driven Form </a>
           <!-- <mat-divider></mat-divider> -->
-          <a mat-list-item [routerLink]="'/reactive-form'" routerLinkActive="active" > 
+          <a mat-list-item [routerLink]="'/reactive-form'" routerLinkActive="active" (click)="drawer.close()"> 
             <mat-icon>account_box</mat-icon>
              Reactive Form </a>
 
-          <a mat-list-item [routerLink]="'/dashboard'" routerLinkActive="active"> 
+          <a mat-list-item [routerLink]="'/dashboard'" routerLinkActive="active" (click)="drawer.close()"> 
             <mat-icon mat-list-icon>dashboard</mat-icon>
              Dashbaord </a>
     
@@ -27,7 +27,12 @@
       </mat-drawer>
     
       <div class="example-sidenav-content">
-        <router-outlet></router-outlet>
+        <!-- <div class="scroll-window" slimScroll [options]="opts" [scrollEvents]="scrollEvents"> -->
+          
+          <app-loader></app-loader>
+
+          <router-outlet></router-outlet>
+        <!-- </div> -->
       </div>
     
     </mat-drawer-container>

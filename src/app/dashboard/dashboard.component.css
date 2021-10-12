@@ -1,0 +1,92 @@
+mat-toolbar {
+    justify-content: space-between;
+}
+
+.content {
+    padding:16px 0px 16px  16px;
+}
+
+.content > mat-card {
+    width: 200px;
+}
+.column-label {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.card_container{
+    margin: 0 !important;
+}
+
+.mat-card{
+    padding: 15px 0 !important; 
+    cursor: pointer;
+}
+.body_img{
+    overflow: hidden;
+    overflow: hidden;
+    height: 180px;
+    margin-bottom: 20px;
+}
+.mat-card:hover{
+    box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%);
+}
+.mat-card .mat-card-image{
+    transition: 0.5s;
+    overflow: hidden;
+
+}
+.mat-card:hover .mat-card-image{
+    transform: scale(1.5);
+}
+
+.mat-card-content {
+    padding: 0 15px;
+    margin: 0;
+}
+.mat-card-actions{
+    padding:15px 15px 0!important;
+    margin: 0 !important;
+}
+.mat-card-header .mat-card-title{
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+
+
+/* dashboard header starts */
+.dashboard_header{
+    position: relative;
+    min-height: 50px;
+    /* margin-bottom: 20px; */
+    padding: 0 20px;
+}
+.dashbard_title_part{
+    display: inline-block;
+    vertical-align: middle;
+}
+.dashbard_title_part h2{
+    padding: 0;
+    margin: 0;
+}
+.dashbard_search{
+
+}
+
+.dashboard_actions{
+    position: absolute;
+    right: 20px;
+    top: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dashboard_actions ul li{
+    display: inline-block;
+    list-style-type: none;
+}
+.dashboard_actions ul li mat-icon{
+    cursor: pointer;
+}
+/* dashboard header ends */

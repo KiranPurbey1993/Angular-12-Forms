@@ -1,0 +1,55 @@
+<div class="form_container">
+    <h2>Add User</h2>
+    <br/>
+    <mat-card>
+        <mat-card-content>
+            <form  class="form-group" novalidate>
+            
+                <!-- Name -->
+                <mat-form-field class="example-full-width">
+                <input matInput placeholder="Name" name="name" [(ngModel)]="userObj.name" class="form-control" required [ngClass]="{ 'is-invalid': submitted && userObj.name.errors }">
+                <div *ngIf="submitted && userObj.name.errors" class="invalid-feedback">
+                    <mat-error *ngIf="userObj.name.errors?.required">Name is required</mat-error>
+                </div>
+            
+            </mat-form-field> 
+               
+                <!-- Email -->
+                <mat-form-field class="example-full-width">
+                <input matInput placeholder="Email" name="email" [(ngModel)]="userObj.email" class="form-control" >
+               
+                <!-- <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <mat-error *ngIf="f.email.errors?.required">Email is required</mat-error>
+                    <mat-error *ngIf="f.email.errors?.email">Must be a valid email address</mat-error>
+                </div> -->
+                </mat-form-field>
+
+                <!-- Phone -->
+                <mat-form-field class="example-full-width">
+                    <input type="tel" matInput placeholder="Phone" name="phone" [(ngModel)]="userObj.phone" class="form-control">
+                   
+                    <!-- <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                        <mat-error *ngIf="f.phone.errors?.required">Phone is required</mat-error>
+                         <mat-error *ngIf="f.phone.errors?.email">Must be a valid email address</mat-error> -->
+                    <!-- </div>  -->
+                    </mat-form-field>
+                
+                <!-- Description -->
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Description" name="des" [(ngModel)]="userObj.des" class="form-control" >                                      
+                </mat-form-field>
+
+                <!-- Submit -->
+               
+                <div class="button">
+                    <button mat-raised-button  color="primary" (click)="updateUser(userObj.id, userObj)">Update User</button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+
+
+
+</div>
+
+

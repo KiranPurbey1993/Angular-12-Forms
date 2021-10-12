@@ -2,6 +2,7 @@ import { Input, Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {Router} from '@angular/router';
 
 
+
 export class User {
   public email: string = '';
   public password: string ='';
@@ -23,6 +24,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(form:any) : void {
+ 
     if(form.value.email == 'purbey.kiran@gmail.com' && form.value.password == 'admin'){
      this.router.navigate(["dashboard"]);
     }else {
@@ -33,6 +35,7 @@ export class LoginComponent implements OnInit {
   }
 
   goToReactiveForm() : void {
+    // this.loaderService.showLoader();
     this.router.navigate(["reactive-form"]);
   }
   

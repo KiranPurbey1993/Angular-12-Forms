@@ -1,0 +1,55 @@
+<div class="form_container">
+    <h2>Add User</h2>
+    <br/>
+    <mat-card>
+        <mat-card-content>
+            <form [formGroup]="addForm" (ngSubmit)="submitForm()" novalidate>
+            
+                <!-- Name -->
+                <mat-form-field class="example-full-width">
+                <input matInput placeholder="Name" formControlName="name" required [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                    <mat-error *ngIf="f.name.errors?.required">Name is required</mat-error>
+                </div>
+            
+            </mat-form-field> 
+               
+                <!-- Email -->
+                <mat-form-field class="example-full-width">
+                <input matInput placeholder="Email" formControlName="email" required>
+               
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <mat-error *ngIf="f.email.errors?.required">Email is required</mat-error>
+                    <mat-error *ngIf="f.email.errors?.email">Must be a valid email address</mat-error>
+                </div>
+                </mat-form-field>
+
+                <!-- Phone -->
+                <mat-form-field class="example-full-width">
+                    <input type="tel" matInput placeholder="Phone" formControlName="phone" required>
+                   
+                    <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                        <mat-error *ngIf="f.phone.errors?.required">Phone is required</mat-error>
+                        <mat-error *ngIf="f.phone.errors?.pattern">Mobile number is not 10 digit</mat-error>
+                    </div>
+                    </mat-form-field>
+                
+                <!-- Description -->
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Description" formControlName="des" >                                      
+                </mat-form-field>
+
+                <!-- Submit -->
+               
+                <div class="button">
+                    <button mat-raised-button  color="primary" [disabled]="!addForm.valid">Add User</button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+
+
+
+</div>
+
+

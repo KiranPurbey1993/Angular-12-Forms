@@ -1,0 +1,15 @@
+.form_container h2{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.mat-form-field {
+    width: 100%;
+    min-width: 300px;
+  }
+
+  .button {
+    display: flex;
+    justify-content: flex-end;
+  }
