@@ -46,3 +46,5 @@ flex layout library `https://zoaibkhan.com/blog/create-a-responsive-card-grid-in
 Fake Json Server   `https://www.npmjs.com/package/json-server`
 
 Mobile Number Validation  `https://www.positronx.io/angular-10-digit-mobile-number-validation-tutorial-example/`
+
+Tooltip added `ng2-tooltip-directive`
