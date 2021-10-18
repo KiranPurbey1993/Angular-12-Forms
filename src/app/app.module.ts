@@ -19,9 +19,14 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 import { ISlimScrollOptions, NgSlimScrollModule, SLIMSCROLL_DEFAULTS } from 'ngx-slimscroll';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { TooltipModule } from 'ng2-tooltip-directive';
 
 
 
@@ -34,7 +39,7 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
-// import { LoaderComponent } from './loader/loader.component';
+import { MyModalComponent } from './my-modal/my-modal.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +51,8 @@ import { AddUserComponent } from './components/add-user/add-user.component';
     LoginComponent,
     ReactiveFormComponent,
     EditUserComponent,
-    AddUserComponent
+    AddUserComponent,
+    MyModalComponent
   ],
   imports: [
     HttpClientModule,
@@ -66,10 +72,14 @@ import { AddUserComponent } from './components/add-user/add-user.component';
     MatRadioModule,
     MatInputModule,
     MatListModule,
+    MatTooltipModule,
+    MatAutocompleteModule,
+    MatDialogModule,
     AppRoutingModule,
     ReactiveFormsModule,
     NgSlimScrollModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    TooltipModule
   ],
   providers: [
     // OPTIONAL : provide default global settings which will be merge with component options.
@@ -81,7 +91,8 @@ import { AddUserComponent } from './components/add-user/add-user.component';
     },
   ],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  entryComponents: [MyModalComponent]
 
 })
 export class AppModule { }

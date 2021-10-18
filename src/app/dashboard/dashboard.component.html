@@ -2,19 +2,35 @@
 
     <div class="dashbard_title_part">
         <h2>Dashboard List</h2>
-        <div class="search_part"></div>
+        <div class="search_part">
+          <form [formGroup]="stateForm">
+            <mat-form-field>
+              <input type="text" matInput placeholder="User Group" formControlName="stateGroup" required [matAutocomplete]="autoGroup">
+              <mat-icon matTooltip="Search" matTooltipPosition="below">search</mat-icon>
+              <mat-autocomplete #autoGroup="matAutocomplete">
+                  <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
+                      <mat-option *ngFor="let name of group.names" [value]="name">
+                        {{name}}
+                      </mat-option>
+                  </mat-optgroup>
+                </mat-autocomplete>
+            </mat-form-field>
+          </form>
+        </div>
     </div>
     <div class="dashboard_actions">
         <ul>
-            <li routerLink="/add">
+            <li routerLink="/add" [tooltip]="$any(HtmlContent)" contentType="template">
                 <mat-icon>add_circle</mat-icon>
             </li>
-            <li>
+            <!-- <li matTooltip="List View" matTooltipPosition="below">
                 <mat-icon>list</mat-icon>
-            </li>
+            </li> -->
         </ul>
     </div>
-
+    <ng-template #HtmlContent>
+      <p>Add <strong>User</strong></p>
+    </ng-template>
   </div>
   <div class="content">
     <div fxLayout="row wrap" fxLayoutGap="16px grid" class="card_container">
@@ -35,10 +51,12 @@
             </p>
           </mat-card-content>
           <mat-card-actions>
-            <button  mat-mini-fab color="primary" aria-label="Edit" routerLink="/edit/{{user.id}}"> <mat-icon>edit</mat-icon></button>
-            <button  mat-mini-fab color="warn" aria-label="Delete" style="float: right;" (click)="delete(user.id)"> <mat-icon>delete</mat-icon></button>
+            <button  mat-mini-fab color="primary" aria-label="Edit" routerLink="/edit/{{user.id}}" matTooltip="Edit" matTooltipPosition="above"> <mat-icon>edit</mat-icon></button>
+            <button  mat-mini-fab color="warn" aria-label="Delete" style="float: right;" (click)="openDialog(user)"   matTooltip="Delete" matTooltipPosition="above" > <mat-icon>delete</mat-icon></button>
           </mat-card-actions>
         </mat-card>
       </div>
     </div>
 </div>
+
+

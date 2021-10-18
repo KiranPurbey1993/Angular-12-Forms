@@ -77,7 +77,7 @@ mat-toolbar {
 .dashboard_actions{
     position: absolute;
     right: 20px;
-    top: 0;
+    top: 30px;
     display: inline-block;
     vertical-align: middle;
 }
@@ -87,6 +87,14 @@ mat-toolbar {
     list-style-type: none;
 }
 .dashboard_actions ul li mat-icon{
+    cursor: pointer;
+}
+
+.search_part mat-icon{
+    position: absolute;
+    top: 7px;
+    margin: 0;
+    right: 0;
     cursor: pointer;
 }
 /* dashboard header ends */

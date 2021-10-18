@@ -1,13 +1,6 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Amy Ferra Fowler",
-      "email": "amy@gmail.com",
-      "phone": "202-555-0183",
-      "des": "Just additional small info, if you want to close"
-    },
-    {
       "id": 3,
       "name": "Ranjit Kumar",
       "email": "raj@gmail.com",
@@ -15,46 +8,46 @@
       "des": "Just additional small info, if you want to close"
     },
     {
-      "id": 4,
-      "name": "Amy Ferra Fowler",
-      "email": "amy@gmail.com",
-      "phone": "202-555-0183",
-      "des": "Just additional small info, if you want to close"
+      "name": "Ritesh Ranjan",
+      "email": "ritesh.ranjan@gmail.com",
+      "phone": "9890837327",
+      "des": "2feer",
+      "id": 6
     },
     {
-      "id": 5,
-      "name": "Amy Ferra Fowler",
-      "email": "amy@gmail.com",
-      "phone": "202-555-0183",
-      "des": "Just additional small info, if you want to close"
+      "name": "Hello Dolly",
+      "email": "hello_dolly@gmail.com",
+      "phone": "9503804414",
+      "des": "ddffffd",
+      "id": 7
     },
     {
-      "id": 6,
-      "name": "Kiran Purbey",
+      "name": "Rituraj Ranjan",
+      "email": "ritu@gmail.com",
+      "phone": "9822929562",
+      "des": "edddddf",
+      "id": 8
+    },
+    {
+      "name": "ritesh",
+      "email": "purbey.kiran@gmail.com",
+      "phone": "9890837327",
+      "des": "2fsddssssssssssssssssssssssssssssssss",
+      "id": 9
+    },
+    {
+      "name": "hello dolly",
       "email": "purbey.kiran@gmail.com",
       "phone": "9503804414",
-      "des": "Just additional small info, if you want to close"
-    },
-    {
-      "id": 7,
-      "name": "Raj Koothrappali",
-      "email": "raj@gmail.com",
-      "phone": "202-555-0183",
-      "des": "Just additional small info, if you want to close"
-    },
-    {
-      "id": 8,
-      "name": "Amy Ferra Fowler",
-      "email": "amy@gmail.com",
-      "phone": "202-555-0183ssss",
-      "des": "Just additional small info, if you want to close"
-    },
-    {
-      "name": "kiran",
-      "email": "purbey.kiran@gmail.com",
-      "phone": "9822929562",
-      "des": "kiran is a sweet girl",
+      "des": "ddffffd",
       "id": 10
+    },
+    {
+      "name": "ritu",
+      "email": "sdsfd@efe",
+      "phone": "3454556667",
+      "des": "edddddf",
+      "id": 11
     }
   ]
 }
